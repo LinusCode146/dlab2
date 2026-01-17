@@ -788,7 +788,6 @@
       }
     }
 
-    /* Scroll Reveal Utility */
     .reveal {
       opacity: 1 !important;
       transform: translateY(0) !important;
@@ -797,7 +796,6 @@
 </head>
 <body>
 
-<!-- Navigation -->
 <nav class="nav" id="nav">
   <div class="nav-logo">Seelenraum</div>
   <div class="nav-toggle" id="navToggle">
@@ -1002,7 +1000,6 @@
 </footer>
 
 <script>
-  // Mobile Menu Toggle
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
 
@@ -1011,7 +1008,6 @@
     navLinks.classList.toggle('active');
   });
 
-  // Close mobile menu when clicking a link
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       navToggle.classList.remove('active');
@@ -1019,7 +1015,6 @@
     });
   });
 
-  // Close mobile menu when clicking outside
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.nav')) {
       navToggle.classList.remove('active');
@@ -1027,7 +1022,6 @@
     }
   });
 
-  // Smooth Scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -1041,7 +1035,6 @@
     });
   });
 
-  // Navigation Scroll Effect
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
@@ -1051,7 +1044,6 @@
     }
   });
 
-  // Scroll Reveal Animation
   const revealElements = document.querySelectorAll('.konzept-card, .angebot-card, .galerie-item, .philosophie-quote');
 
   const revealOnScroll = () => {
@@ -1072,7 +1064,6 @@
   window.addEventListener('scroll', revealOnScroll);
   window.addEventListener('load', revealOnScroll);
 
-  // Form Handling
   const form = document.querySelector('.kontakt-form');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
